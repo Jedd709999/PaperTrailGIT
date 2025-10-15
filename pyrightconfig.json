@@ -1,0 +1,16 @@
+{
+    "include": [
+        "papertrail_backend",
+        "papertrail_frontend"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/__pycache__",
+        "papertrail_backend/venv"
+    ],
+    "reportArgumentType": false,
+    "reportAttributeAccessIssue": false,
+    "reportIncompatibleMethodOverride": false,
+    "reportReturnType": false,
+    "reportUnknownMemberType": false
+}

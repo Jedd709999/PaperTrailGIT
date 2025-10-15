@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: papertrail_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-papertrail_db}
+      MYSQL_USER: ${DB_USER:-papertrail_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-papertrail_password}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root_password}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./
+      dockerfile: papertrail_backend/Dockerfile
+    container_name: papertrail_backend
+    env_file:
+      - papertrail_backend/.env
+    environment:
+      DB_HOST: db
+    volumes:
+      - ./papertrail_backend:/app
+      - media_data:/app/media
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./
+      dockerfile: papertrail_frontend/Dockerfile
+    container_name: papertrail_frontend
+    env_file:
+      - papertrail_frontend/.env
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
+  media_data:
