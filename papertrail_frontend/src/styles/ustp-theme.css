@@ -1,0 +1,454 @@
+/* stylelint-disable at-rule-no-unknown */
+/* Enhanced University Theme for PaperTrail */
+/* Modern, professional educational institution styling with academic aesthetics */
+
+/* Base styles with enhanced university color scheme */
+:root {
+  --university-primary: #1a3a6c;      /* Deep academic blue */
+  --university-secondary: #2c5282;    /* Medium blue */
+  --university-accent: #d69e2e;       /* Golden accent */
+  --university-light: #ebf8ff;        /* Light blue background */
+  --university-dark: #0a1a2f;         /* Deep navy */
+  --university-text: #2d3748;         /* Dark gray text */
+  --university-muted: #718096;        /* Muted text */
+  --university-border: #cbd5e0;       /* Light border */
+  --university-success: #38a169;      /* Success green */
+  --university-warning: #dd6b20;      /* Warning orange */
+  --university-danger: #e53e3e;       /* Danger red */
+  --university-white: #ffffff;        /* White */
+  --university-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --university-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --university-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.06);
+  --university-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* University-inspired button styles */
+.btn-university {
+  @apply px-6 py-3 bg-university-primary text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:bg-university-secondary focus:outline-none focus:ring-2 focus:ring-university-secondary focus:ring-opacity-50 transform hover:-translate-y-0.5;
+}
+
+.btn-university-secondary {
+  @apply px-6 py-3 bg-university-secondary text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:bg-university-primary focus:outline-none focus:ring-2 focus:ring-university-primary focus:ring-opacity-50;
+}
+
+.btn-university-accent {
+  @apply px-6 py-3 bg-university-accent text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-university-accent focus:ring-opacity-50;
+}
+
+.btn-university-outline {
+  @apply px-6 py-3 bg-transparent text-university-primary font-semibold rounded-lg border-2 border-university-primary shadow-sm hover:shadow-md transition-all duration-200 hover:bg-university-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-university-primary focus:ring-opacity-50;
+}
+
+.btn-university-light {
+  @apply px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50;
+}
+
+/* University-inspired card styles */
+.card-university {
+  @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-university-border overflow-hidden;
+}
+
+.card-university-header {
+  @apply bg-gradient-to-r from-university-primary to-university-secondary text-white px-6 py-4 border-b border-university-border -mx-6 -mt-6 mb-6 rounded-t-xl;
+}
+
+.card-university-body {
+  @apply text-university-text space-y-4 px-6 pb-6;
+}
+
+.card-university-footer {
+  @apply bg-university-light border-t border-university-border px-6 py-4 -mx-6 -mb-6 rounded-b-xl;
+}
+
+.card-university-sm {
+  @apply bg-white rounded-lg shadow-sm p-4 border border-university-border hover:shadow-md transition-shadow duration-200;
+}
+
+.card-university-xs {
+  @apply bg-university-light rounded p-3 border border-university-border;
+}
+
+/* Enhanced university form styles */
+.form-input-university {
+  @apply w-full px-4 py-3 border-2 border-university-border rounded-xl focus:outline-none focus:ring-4 focus:ring-university-primary focus:ring-opacity-20 focus:border-university-primary transition-all duration-300 bg-white shadow-sm hover:shadow-md placeholder-university-muted;
+}
+
+.form-label-university {
+  @apply block text-sm font-semibold text-university-text mb-2 tracking-wide;
+}
+
+.form-select-university {
+  @apply w-full px-4 py-3 border-2 border-university-border rounded-xl focus:outline-none focus:ring-4 focus:ring-university-primary focus:ring-opacity-20 focus:border-university-primary transition-all duration-300 bg-white shadow-sm hover:shadow-md cursor-pointer;
+}
+
+.form-textarea-university {
+  @apply w-full px-4 py-3 border-2 border-university-border rounded-xl focus:outline-none focus:ring-4 focus:ring-university-primary focus:ring-opacity-20 focus:border-university-primary transition-all duration-300 bg-white shadow-sm hover:shadow-md resize-y placeholder-university-muted min-h-[120px];
+}
+
+/* University-themed table styles */
+.table-university {
+  @apply w-full border-collapse rounded-xl overflow-hidden shadow-lg border border-university-border;
+}
+
+.table-university th {
+  @apply bg-gradient-to-r from-university-primary to-university-secondary text-white font-bold text-left px-6 py-4 border-b-2 border-university-border tracking-wide text-base;
+}
+
+.table-university td {
+  @apply px-6 py-4 border-b border-university-border text-university-text hover:bg-university-light transition-colors duration-200;
+}
+
+.table-university tr:last-child td {
+  @apply border-b-0;
+}
+
+.table-university tr:hover {
+  @apply bg-university-light;
+}
+
+/* University-inspired navigation styles */
+.nav-university {
+  @apply bg-white text-university-text shadow-md border-b border-university-border;
+}
+
+.nav-university-vertical {
+  @apply w-64 bg-white border-r border-university-border shadow-sm h-full;
+}
+
+.nav-university-item {
+  @apply text-university-text hover:text-university-primary hover:bg-university-light px-4 py-3 text-sm font-medium transition-all duration-200 border-l-4 border-transparent hover:border-university-primary;
+}
+
+.nav-university-item-active {
+  @apply text-university-primary bg-university-light border-l-4 border-university-primary font-semibold;
+}
+
+/* University-themed badge styles */
+.badge-university {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wide shadow-sm;
+}
+
+.badge-university-primary {
+  @apply bg-university-primary text-white;
+}
+
+.badge-university-secondary {
+  @apply bg-university-secondary text-white;
+}
+
+.badge-university-accent {
+  @apply bg-university-accent text-white;
+}
+
+.badge-university-success {
+  @apply bg-university-success text-white;
+}
+
+.badge-university-warning {
+  @apply bg-university-warning text-white;
+}
+
+.badge-university-error {
+  @apply bg-university-danger text-white;
+}
+
+.badge-university-light {
+  @apply bg-university-light text-university-text;
+}
+
+.badge-university-sm {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold;
+}
+
+/* University-themed alert styles */
+.alert-university {
+  @apply p-4 rounded-lg border-l-4 font-medium;
+}
+
+.alert-university-info {
+  @apply bg-blue-50 border-blue-500 text-blue-800;
+}
+
+.alert-university-success {
+  @apply bg-green-50 border-green-500 text-green-800;
+}
+
+.alert-university-warning {
+  @apply bg-yellow-50 border-yellow-500 text-yellow-800;
+}
+
+.alert-university-error {
+  @apply bg-red-50 border-red-500 text-red-800;
+}
+
+/* Enhanced university modal styles */
+.modal-university {
+  @apply fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm overflow-y-auto h-full w-full z-50 flex items-center justify-center p-4;
+}
+
+.modal-university-content {
+  @apply relative bg-white rounded-2xl shadow-2xl m-auto p-6 border-0 max-w-2xl w-full transform transition-all duration-300;
+}
+
+/* University-themed loading spinner */
+.spinner-university {
+  @apply animate-spin rounded-full border-4 border-university-border border-t-university-primary h-12 w-12;
+}
+
+/* University-inspired typography */
+.heading-university {
+  @apply text-3xl font-bold text-university-dark mb-6 tracking-tight;
+}
+
+.heading-university-sm {
+  @apply text-xl font-bold text-university-dark mb-4;
+}
+
+.subheading-university {
+  @apply text-xl font-semibold text-university-primary mb-4 tracking-tight;
+}
+
+.text-university {
+  color: var(--university-text);
+  @apply leading-relaxed;
+}
+
+.text-university-muted {
+  color: var(--university-muted);
+}
+
+.text-university-bold {
+  @apply font-semibold text-university-dark;
+}
+
+/* Enhanced university layout styles */
+.container-university {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-university {
+  @apply py-8;
+}
+
+/* University-themed status indicators */
+.status-university {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wide;
+}
+
+.status-university-pending {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-university-approved {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-university-rejected {
+  @apply bg-red-100 text-red-800;
+}
+
+.status-university-draft {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-university-in-progress {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-university-completed {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-university-revision {
+  @apply bg-orange-100 text-orange-800;
+}
+
+/* University-themed document upload area */
+.upload-area-university {
+  @apply border-2 border-dashed border-university-border rounded-xl p-8 text-center hover:border-university-primary hover:bg-university-light transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-university-light;
+}
+
+.upload-area-university-active {
+  @apply border-university-primary bg-university-light border-2;
+}
+
+/* University-themed progress bar */
+.progress-university {
+  @apply w-full bg-university-border rounded-full h-3 overflow-hidden;
+}
+
+.progress-university-bar {
+  @apply bg-gradient-to-r from-university-primary to-university-secondary h-3 rounded-full transition-all duration-500;
+}
+
+/* University-inspired login page styles */
+.login-container-university {
+  @apply min-h-screen bg-gradient-to-br from-university-light to-white flex items-center justify-center p-4;
+}
+
+.login-card-university {
+  @apply bg-white rounded-xl shadow-xl p-8 w-full max-w-md border border-university-border;
+}
+
+.login-heading-university {
+  @apply text-2xl font-bold text-center mb-6 text-university-dark;
+}
+
+.login-logo-university {
+  @apply text-3xl font-bold text-center mb-6 text-university-primary;
+}
+
+.input-university {
+  @apply w-full px-4 py-3 border border-university-border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-university-primary focus:ring-opacity-50 focus:border-university-primary transition-all duration-200 bg-white text-university-text;
+}
+
+.button-university {
+  @apply w-full py-3 bg-university-primary text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:bg-university-secondary focus:outline-none focus:ring-2 focus:ring-university-primary focus:ring-opacity-50 transform hover:-translate-y-0.5;
+}
+
+.text-university-error {
+  @apply text-university-danger text-center mb-4 p-3 bg-red-50 border border-red-200 rounded-lg;
+}
+
+/* University-inspired dashboard styles */
+.dashboard-header-university {
+  @apply bg-gradient-to-r from-university-primary to-university-secondary text-white rounded-xl p-6 mb-8 shadow-lg;
+}
+
+.dashboard-welcome-university {
+  @apply text-3xl font-bold mb-2;
+}
+
+.dashboard-subtitle-university {
+  @apply text-university-light opacity-90 text-lg;
+}
+
+.stat-card-university {
+  @apply bg-white rounded-xl shadow-md p-6 border border-university-border hover:shadow-lg transition-all duration-300;
+}
+
+.stat-card-university-primary {
+  @apply border-l-4 border-university-primary;
+}
+
+.stat-card-university-accent {
+  @apply border-l-4 border-university-accent;
+}
+
+.stat-card-university-success {
+  @apply border-l-4 border-university-success;
+}
+
+.stat-card-university-warning {
+  @apply border-l-4 border-university-warning;
+}
+
+.stat-title-university {
+  @apply text-sm font-semibold text-university-muted mb-1;
+}
+
+.stat-value-university {
+  @apply text-2xl font-bold text-university-dark;
+}
+
+/* University-themed navigation bar */
+.navbar-university {
+  @apply bg-white border-b border-university-border shadow-sm;
+}
+
+.navbar-brand-university {
+  @apply text-xl font-bold text-university-primary;
+}
+
+.navbar-link-university {
+  @apply text-university-text hover:text-university-primary transition-colors font-medium px-3 py-2 rounded-md;
+}
+
+.navbar-link-university-active {
+  @apply text-university-primary bg-university-light;
+}
+
+/* University-themed sidebar */
+.sidebar-university {
+  @apply bg-white border-r border-university-border h-full;
+}
+
+.sidebar-header-university {
+  @apply p-4 border-b border-university-border;
+}
+
+.sidebar-menu-university {
+  @apply p-2;
+}
+
+.sidebar-item-university {
+  @apply flex items-center px-4 py-3 text-university-text hover:bg-university-light rounded-lg transition-colors duration-200;
+}
+
+.sidebar-item-university-active {
+  @apply bg-university-light text-university-primary font-semibold;
+}
+
+.sidebar-icon-university {
+  @apply mr-3 text-university-muted;
+}
+
+/* University-themed footer */
+.footer-university {
+  @apply bg-university-dark text-university-light py-8 border-t border-university-border;
+}
+
+.footer-content-university {
+  @apply container-university mx-auto px-4;
+}
+
+.footer-logo-university {
+  @apply text-xl font-bold mb-4;
+}
+
+.footer-links-university {
+  @apply flex flex-wrap gap-6 mb-6;
+}
+
+.footer-link-university {
+  @apply text-university-light hover:text-university-accent transition-colors;
+}
+
+.footer-copyright-university {
+  @apply text-university-muted text-sm pt-6 border-t border-university-border;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container-university {
+    @apply px-4;
+  }
+  
+  .card-university-body {
+    @apply px-4 py-3;
+  }
+  
+  .btn-university {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .dashboard-header-university {
+    @apply p-4;
+  }
+  
+  .dashboard-welcome-university {
+    @apply text-2xl;
+  }
+  
+  .stat-card-university {
+    @apply p-4;
+  }
+  
+  .stat-value-university {
+    @apply text-xl;
+  }
+  
+  .card-university-sm {
+    @apply p-3;
+  }
+}
